@@ -6,3 +6,20 @@
 #     1 2 3 4 5
 #     6
 #     -> 5
+
+
+print('Задача № 18')
+print()
+import random
+
+GetUserNum = int(input("Введите количество числе в массиве: "))
+array = [0] * GetUserNum
+for i in range(GetUserNum):
+    array[i] = random.randint(1,10)
+digit = int(input("Введите искомое близкое число: "))
+min_dif = array[0]
+for i in array:
+    if abs(digit - i) < abs(min_dif-digit):
+        min_dif = i
+        
+print(f"Самое близкое число к {digit} в массиве {array} является {min_dif}")
